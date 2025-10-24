@@ -28,7 +28,9 @@ pipeline {
                     
                     if ! command -v aws >/dev/null 2>&1; then
                         echo "AWS CLI not found — installing via pip..."
-                        python3 -m pip install --user awscli
+                        sudo apt update
+                        sudo apt install awscli -y
+
                     else
                         echo "✅ AWS CLI already installed."
                     fi
