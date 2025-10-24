@@ -21,8 +21,8 @@ pipeline {
                     # Install pip3 if missing
                     if ! command -v pip3 >/dev/null 2>&1; then
                         echo "pip3 not found — installing..."
-                        apt-get update -y || true
-                        apt-get install -y python3-pip || true
+                        sudo apt-get update -y 
+                        sudo apt-get install -y python3-pip 
                     fi
 
                     
